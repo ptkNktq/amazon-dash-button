@@ -16,7 +16,7 @@ const params = {
 
 // Amazon Dash Button
 const dash = dash_button(config['address'], null, null, 'all');
-dash.on("detected", function (){
+dash.on("detected", function() {
 	
 	client.get('statuses/user_timeline', params, function(error, tweets, response) {
 		const length = Object.keys(tweets).length;
